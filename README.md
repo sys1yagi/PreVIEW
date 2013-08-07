@@ -16,7 +16,7 @@ ReVIEW preview.
 install node, bower dependencies and clone ReVIEW.
 
 ```
-./setup
+./setup.sh
 ```
 
 ## run
