@@ -1,0 +1,33 @@
+extends layout
+block content
+    .navbar.navbar-inverse#head
+        .navbar-inner
+            .container-fluid
+                a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='/')
+                    | PreVIEW
+                .nav-collapse
+                    ul.nav
+                        li.active
+                            a(href='#')
+                                | Home
+                        li
+                            a(href='./about')
+                                | About
+                        li
+                            a(href='./settings')
+                                | Settings
+    .container-fluid#container(style="height:90%;")
+        .row-fluid(style="height:100%;")
+            .span6(style="height:100%;")
+                textarea#source_code(style="height:100%;width:100%;margin-right:20px;")=source
+            .span6
+                div#preview(style="padding:10px;width:")
+block footer
+    script(type="text/javascript")
+        require(['javascripts/pages/index'], function(initialize) {
+              initialize();
+            });

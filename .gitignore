@@ -1,3 +1,11 @@
+.idea
+node_modules/
+public/components
+.sass-cache
+
+index.html
+tmp/*.re
+
 lib-cov
 *.seed
 *.log
