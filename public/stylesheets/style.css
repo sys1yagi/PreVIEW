@@ -1,8 +1,17 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#codeTextarea{
+    width:500px;
+    height:510px;
 }
-
-a {
-  color: #00B7FF;
+.textAreaWithLines{
+    font-family:courier;
+    border:1px solid #666;
+    background-color:#eee;
+}
+.textAreaWithLines textarea,.textAreaWithLines div{
+    border:0px;
+    line-height:120%;
+    font-size:12px;
+}
+.lineObj{
+    color:#aaa;
 }
