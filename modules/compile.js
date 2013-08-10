@@ -8,7 +8,7 @@ var Compile = (function(){
     var compiledFile = "index.html";
     Compile.prototype.compile = function(source, callback){
         fs.writeFileSync(tmpFile, source);
-        exec("review/bin/review-compile", ["--target=HTML","--directory=tmp"], function (error, stdout, stderr) {
+        exec("review/bin/review-compile", ["--target=html","--directory=tmp"], function (error, stdout, stderr) {
             if(stdout){
                 console.log('stdout: ' + stdout);
             }
