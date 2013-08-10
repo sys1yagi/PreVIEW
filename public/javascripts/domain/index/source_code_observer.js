@@ -86,6 +86,11 @@ define(
                 }
             }
 
+            function tabIndentEnable(id){
+                var el = document.getElementById(id)
+                tabIndent.render(el);
+            }
+
             this.after("initialize", function () {
                 var self = this;
                 var timer = null;
@@ -104,6 +109,7 @@ define(
                     }, 500);
                 });
                 createTextAreaWithLines(this.node.id);
+                tabIndentEnable(this.node.id);
             });
         }
     }
