@@ -3,8 +3,9 @@ define(
     [
         "javascripts/domain/index/compile",
         "javascripts/domain/index/source_code_observer",
+        "javascripts/domain/index/filelist"
     ],
-    function(compile, observer){
+    function(compile, observer, filelist){
         function initialize(){
             var source= $("#source_code");
             var preview= $("#preview");
@@ -17,6 +18,7 @@ define(
 
             compile.attachTo("#preview", {"source":"#source_code", "destination":"#preview"});
             observer.attachTo("#source_code", {});
+            filelist.attachTo("#filelist", {});
         }
         return initialize;
     }

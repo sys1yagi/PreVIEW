@@ -4,8 +4,6 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -26,9 +24,9 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
-
-app.get('/', routes.index);
-app.post('/compile', user.compile);
+app.get('/', require('./routes').handler);
+app.post('/compile', require('./routes/compile').handler);
+app.get('/filelist', require('./routes/filelist').handler);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

@@ -22,9 +22,23 @@ block content
                                 | Settings
     .container-fluid#container(style="height:90%;")
         .row-fluid(style="height:100%;")
-            .span6(style="height:100%;")
-                textarea#source_code(style="height:100%;width:95%;margin-right:20px;resize: none;",placeholder="Enter file contents here...")=source
-            .span6
+            .span2
+                .btn-group
+                    .btn#button_new_file
+                        i.icon-plus
+                        | New
+                    .btn.disabled#button_upload_file
+                        i.icon-upload
+                        | Up
+                    .btn.disabled#button_download_files
+                        i.icon-download
+                        | DL
+                hr(style="margin-top:10px;margin-bottom:5px;")
+                ul.nav.nav-list#filelist
+
+            .span5(style="height:100%;")
+                textarea#source_code(style="height:100%;width:94%;margin-right:20px;",placeholder="Enter file contents here...")=source
+            .span5
                 div#preview(style="padding:5px;width:100%;overflow:auto;border:1px solid #eee;")
 block footer
     script(type="text/javascript")

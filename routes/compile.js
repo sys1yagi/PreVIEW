@@ -1,7 +1,7 @@
 var qs = require('querystring');
 var compile = require("../modules/compile").compile;
 
-exports.compile = function (req, res) {
+exports.handler = function (req, res) {
     compile.compile(req.body.source, function (src) {
         if (src !== null) {
             res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
