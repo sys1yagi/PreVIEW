@@ -5,7 +5,7 @@ ReVIEW preview.
 
 ## demo
 
-http://ec2-54-214-204-32.us-west-2.compute.amazonaws.com:3000/
+http://ec2-54-214-107-105.us-west-2.compute.amazonaws.com:3000/
 
 ## require
 
